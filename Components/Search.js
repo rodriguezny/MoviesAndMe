@@ -4,7 +4,7 @@ import { StyleSheet, View, TextInput, Button } from 'react-native'
 class Search extends React.Component {
     render() {
         return (
-            <View style={{ marginTop: 20 }}>
+            <View style={ styles.mainContainer }>
                 <TextInput style={ styles.textInput } placeholder='Titre du film' />
                 <Button title='Rechercher' onPress={() => {}} />
             </View>
@@ -13,6 +13,10 @@ class Search extends React.Component {
 }
 
 const styles = StyleSheet.create({
+    mainContainer: {
+        flex: 1,
+        marginTop: 20
+    },
     textInput: {
         marginLeft: 5,
         marginRight: 5,
