@@ -3,19 +3,20 @@ import { StyleSheet, View, Text, Image } from 'react-native'
 
 class FilmItem extends React.Component {
     render() {
+        const film = this.props.film
         return (
             <View style={styles.mainContainer}>
                 <Image style={styles.image} source={{uri: "image"}}/>
                 <View style={styles.contentContainer}>
                     <View style={styles.headerContainer}>
-                    <Text style={styles.titleText}>Titre du film</Text>
-                    <Text style={styles.voteText}>Vote</Text>
+                    <Text style={styles.titleText}>{film.title}</Text>
+                    <Text style={styles.voteText}>{film.vote_average}</Text>
                     </View>
                     <View style={styles.descriptionContainer}>
-                        <Text style={styles.descriptionText} numberOfLines={6}>Description</Text>
+                        <Text style={styles.descriptionText} numberOfLines={6}>{film.overview}</Text>
                     </View>
                     <View style={styles.dateContainer}>
-                        <Text style={styles.dateText}>Sortie le 29/06/1993</Text>
+                        <Text style={styles.dateText}>Sortie le {film.release_date}</Text>
                     </View>
                 </View>
             </View>
@@ -31,7 +32,7 @@ const styles = StyleSheet.create({
     image: {
         width: 120,
         height: 180,
-        marginTop: 5,
+        margin: 5,
         backgroundColor: 'gray'
     },
     contentContainer: {
