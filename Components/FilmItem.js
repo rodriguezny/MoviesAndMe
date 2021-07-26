@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, View, Text } from 'react-native'
+import { StyleSheet, View, Text, Image } from 'react-native'
 
 class FilmItem extends React.Component {
     render() {
@@ -8,7 +8,14 @@ class FilmItem extends React.Component {
                 <Image style={styles.image} source={{uri: "image"}}/>
                 <View style={styles.contentContainer}>
                     <View style={styles.headerContainer}>
-
+                    <Text style={styles.titleText}>Titre du film</Text>
+                    <Text style={styles.voteText}>Vote</Text>
+                    </View>
+                    <View style={styles.descriptionContainer}>
+                        <Text style={styles.descriptionText} numberOfLines={6}>Description</Text>
+                    </View>
+                    <View style={styles.dateContainer}>
+                        <Text style={styles.dateText}>Sortie le 29/06/1993</Text>
                     </View>
                 </View>
             </View>
@@ -41,7 +48,26 @@ const styles = StyleSheet.create({
         flex: 1,
         flexWrap: 'wrap',
         paddingRight: 5
-    }
+    },
+    voteText: {
+        fontWeight: 'bold',
+        fontSize: 26,
+        color: '#666666'
+    },
+    descriptionContainer: {
+        flex: 7
+      },
+      descriptionText: {
+        fontStyle: 'italic',
+        color: '#666666'
+      },
+      dateContainer: {
+        flex: 1
+      },
+      dateText: {
+        textAlign: 'right',
+        fontSize: 14
+      }
 })
 
 export default FilmItem
