@@ -9,4 +9,8 @@ export async function getFilmsFromApiWithSearchedText (text) {
     } catch (error) {
         return console.log(error);
     }
-  }
+}
+
+export function getImageFromApi (name) {
+    return 'https://image.tmdb.org/t/p/w300' + name
+}
