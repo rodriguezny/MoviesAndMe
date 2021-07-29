@@ -1,5 +1,3 @@
-// Components/FilmDetail.js
-
 import React from 'react'
 import { StyleSheet, View, Text, ActivityIndicator, ScrollView, Image } from 'react-native'
 import { getFilmDetailFromApi, getImageFromApi } from '../API/TMDBApi'
