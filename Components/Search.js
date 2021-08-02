@@ -2,8 +2,6 @@ import React from 'react'
 import { StyleSheet, View, TextInput, Button, FlatList, ActivityIndicator } from 'react-native'
 import FilmItem from './FilmItem'
 import { getFilmsFromApiWithSearchedText } from '../API/TMDBApi'
-import FilmDetail from './FilmDetail'
-
 class Search extends React.Component {
     constructor(props) {
         super(props)
