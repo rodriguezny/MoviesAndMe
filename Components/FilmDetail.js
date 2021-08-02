@@ -34,7 +34,8 @@ class FilmDetail extends React.Component {
   }
 
   _toggleFavorite() {
-
+    const action = { type: "TOGGLE_FAVORITE", value: this.state.film }
+    this.props.dispatch(action)
   }
 
   _displayFilm() {
