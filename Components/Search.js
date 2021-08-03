@@ -65,7 +65,7 @@ class Search extends React.Component {
                     onChangeText={(text) => this._searchTextInputChanged(text)}
                     onSubmitEditing={() => this._searchFilms()}
                 />
-                <Button title='Rechercher' onPress={() => this._searchFilms()} />
+                <Button style={{margin: 5}} title='Rechercher' onPress={() => this._searchFilms()} />
                 <FlatList
                     data={this.state.films}
                     extraData={this.props.favoritesFilm}
