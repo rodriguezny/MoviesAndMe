@@ -13,13 +13,16 @@ const SearchStackNavigator = createStackNavigator({
         }
     },
     FilmDetail: {
-        screen: FilmDetail
+        screen: FilmDetail,
+        navigationOptions: {
+            title: 'Détail du film'
+        }
     }
 })
 
 const MoviesTabNavigator = createBottomTabNavigator({
     Search: {
-        screen: Search
+        screen: SearchStackNavigator
     },
     Favorites: {
         screen: Favorites
